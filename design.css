@@ -1,0 +1,302 @@
+/* QUE.HTML */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #ceac90;
+    font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+}
+
+section {
+  padding: 10px 20px;
+  max-width: 1500px;
+}
+.section-title {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+.content {
+  margin-top: 100px;
+  background-color: #f3d2b9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: #3d2c2a;
+  color: #3d2c2a;
+}
+
+  /* NAVBAR DESIGN */
+  a {
+    text-decoration: none;
+    color: #3d2c2a;
+  }
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    position: fixed;
+    justify-content: center;
+    text-align: center;
+    background-color: #3d2c2a;
+    width: 100%;
+    height: 13%;
+  }
+
+  .box, .PORT, .show, .code, button, #viewProjectBtn {
+    padding: 10px 15px;
+    margin: 10px;
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.3s;
+  }
+  .box {
+    background-color: #b98672;
+    width: 17%;
+    height: 35%;
+    margin: auto;
+  }
+.box:hover {
+  background-color: #ceac90;
+  color: #745a45;
+  transform: scale(1.1);
+}
+.PORT {
+  color: #ceac90;
+  font-size: 30px;
+}
+
+.projects {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  flex-wrap: wrap;
+  color: #ceac90;
+}
+.projects .project {
+  background-color: #3d2c2a;
+  padding: 10px 10px;
+  width: 47%;
+  height: 15%;
+  border-radius: 8px;
+  box-shadow: #ffffff;
+} 
+
+/*CONTACT ICONS*/
+.fa-location-dot, .fa-envelope, .fa-phone {
+  color: #3d2c2a;
+  font-size: 25px; 
+}
+
+/*SOCIAL ICONS (FB, GH and DC)*/
+  .social {
+    color: #3d2c2a;
+    font-size: 50px;
+    display: flex;
+    gap: 1rem;
+    margin: 10px;
+  }
+
+.fa-facebook, .fa-github, .fa-discord {
+transition: 0.3s;
+}
+
+.fa-facebook:hover, .fa-github:hover, .fa-discord:hover {
+  color: #745a45;
+  transform: scale(1.1);
+  opacity: 1;
+  cursor: pointer;
+}
+
+.show {
+  padding: 10px 10px;
+  background-color: #b98672;
+  width: 17%;
+  border-radius: 15px;
+  text-align: center;
+  transition: 0.3s;
+}
+.show:hover {
+  background-color: #ceac90;
+  color: #745a45;
+  opacity: 1;
+}
+
+.code {
+  padding: 10px 10px;
+  color: #745a45;
+  background-color: #ceac90;
+  width: 17%;
+  border-radius: 15px;
+  text-align: center;
+  transition: 0.3s;
+}
+.code:hover {
+  background-color: #b98672;
+  color: #5c4634;
+  opacity: 1;
+}
+.buttons {
+  gap: 2rem;
+  padding: 20px 0px;
+  justify-content: space-between;
+  display: flex;
+}
+
+  /* Modal POPUP VECTOR ART*/
+button {
+text-decoration: none;
+border: 0;
+padding: 10px 10px;
+background-color: #b98672;
+width: 17%;
+border-radius: 15px;
+text-align: center;
+transition: 0.3s;
+font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+}
+
+#viewProjectBtn {
+text-decoration: none;
+border: 0;
+padding: 10px 10px;
+background-color: #b98672;
+color: #3d2c2a;
+width: 20%;
+height: 20%;
+font-size: 16px;
+border-radius: 15px;
+text-align: center;
+transition: 0.3s;
+text-decoration: none;
+cursor: pointer;
+}
+
+#viewProjectBtn:hover {
+background-color: #ceac90;
+color: #745a45;
+opacity: 1;
+}
+
+.modal {
+display: none; 
+position: fixed;
+z-index: 1;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+overflow: auto;
+background-color: rgba(105, 59, 37, 0.5);
+align-items: center;
+justify-content: center;
+backdrop-filter: blur(2px);
+}
+
+.modal-content {
+padding: 20px;
+width: 75%;
+max-width: 500px;
+text-align: center;
+justify-content: center;
+display: flex;
+margin: auto;
+position: relative;
+}
+
+.close {
+color:#745a45;
+width: 40px;
+height: 40px; 
+font-size: 30px;
+font-weight: bold;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(260%, -440%); 
+cursor: pointer;
+z-index: 1; 
+background: #3d2c2a;
+border-radius: 50%;
+padding: 10px;
+border: 1px solid #201817;
+transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+color: rgb(37, 26, 18);
+text-decoration: none;
+cursor: pointer;
+background: #916c4e;
+}
+
+/*educational bg styling*/
+.container {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.content h2, .experience {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.content ul, .content li {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* experience OR Skills */
+#skills .need {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.experience {
+  background-color: #3d2c2a;
+  padding: 12px;
+  width: 17%;
+  height: 330px;
+  border-radius: 8px;
+  color: #f3d2b9;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.experience h4 {
+  color: white;
+}
+
+/* Styling for the photo gallery School for Educational bg*/
+.gallery {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 100px;
+  background-color: #f3d2b9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: #3d2c2a;
+  color: #3d2c2a;
+  max-width: 80%;   /* Ensures the gallery doesn't stretch out beyond the container */
+  overflow-x: auto;  /* Horizontal scrolling enabled */
+  white-space: nowrap; /* Prevent images from wrapping to the next line */
+  }
+  
+  .pic img {
+  width: 200%;
+  max-width: 450px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  }
+
+  /* My picture for Personal Details */
+  #details {
+    background-image: url("ANGGANDAKO.jpg");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+  }

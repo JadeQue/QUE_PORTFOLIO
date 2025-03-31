@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("MYSTIC.png");
+    background-repeat: no-repeat;
+    background-position: right center; 
+    width: 750px;
+    height: 600px;
+}
+
+.caramel {
+    background-repeat: no-repeat;
+    background-position: right bottom; 
+    width: 200%;
+    margin: 500px 0px 0px -500px;
+}
+
+.mozarella {
+    background-repeat: no-repeat;
+    background-position: right bottom; 
+    margin: 850px 0px 0px -180px;
+}
+
+.cotton {
+    background-repeat: no-repeat;
+    background-position: right bottom; 
+    margin: 1250px 0px 0px -540px;
+}
+
+.container {
+    justify-content: space-evenly;
+    display: flex;
+}
+
+
+table, th, tr, td {
+    border: none;
+    padding: 20px 20px;
+    margin: 20px;
+    font-weight: 15px;
+    border-radius: 15px;
+    border: 2px solid rgb(109, 69, 17);
+    font-family: 'Courier New', Courier, monospace;
+    border-spacing: 5px;
+    width: 60%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: rgb(226, 184, 150);
+}
+
+tr {
+    flex-wrap: wrap;
+}
+
+.sched-1 {
+    padding: 30px 250px;
+    font-size: 45px;
+}
+
+.day {
+    background-color: rgb(182, 134, 95);
+    font-style: bold;
+}
+
+th{
+    background-color: rgb(226, 146, 81);
+    font-size: 23px;
+}
+
+.text {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    align-items: flex-start;
+    display: flex;
+    font-size: 25px;
+    letter-spacing: 0px;
+    margin-top: 20px;
+    margin-left: 0px;
+    color: rgb(43, 28, 19);
+}

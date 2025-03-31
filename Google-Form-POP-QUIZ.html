@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="180x180" href="REMAKE.png">
+    <title>Portfolio: Project | Google Form: POP QUIZ |</title>
+</head>
+
+<style>
+    body {
+        background-color: #581845;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .container {
+        padding: 20px;
+        width: 100%;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .btn {
+        background-color: #FFC300;
+        color: #b46d03;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .int {
+        background-color: #fff;
+        padding: 10px;
+        border: 1px solid rgb(246, 207, 255);
+        border-radius: 5px;
+        width: 95%;
+        display: block;
+        margin: 10px 0;
+        box-sizing: border-box;
+    }
+
+    .box {
+        background-color: #fff;
+        padding: 20px 30px;
+        width: 100%;
+        border-radius: 5px;
+        margin: 15px 0;
+        box-sizing: border-box;
+        border: 1.5px solid rgb(178, 175, 179);
+    }
+
+    .remain {
+        background-color: #ff84a7;
+        padding: 0px 30px;
+        width: 100%;
+        border-radius: 5px;
+        margin: 15px 0;
+        box-sizing: border-box;
+        border: 1.5px solid rgb(178, 175, 179);
+    }
+
+    input[type = radio] {
+        appearance: none;
+        width: 10px;
+        height: 10px;
+        transform: scale(2);
+        border: 1px solid #581845;
+        border-radius: 50%;
+        outline: none;
+        cursor: pointer;
+    }
+
+    input[type="radio"]:checked {
+        background-color: #ff4479;
+        transition: 0.1s all ease-in-out;
+    }
+
+    input[type = checkbox] {
+        appearance: none;
+        width: 10px;
+        height: 10px;
+        transform: scale(2);
+        border: 1px solid #581845;
+        outline: none;
+        cursor: pointer;
+    }
+
+    input[type="checkbox"]:checked {
+        background-color: #ff4479;
+        transition: 0.1s all ease-in-out;
+    }
+    
+    .select {
+        background-color: #fff;
+        padding: 10px;
+        border: 1px solid rgb(246, 207, 255);
+        border-radius: 5px;
+        width: 95%;
+        display: block;
+        margin: 10px 0;
+        box-sizing: border-box;
+        cursor: pointer;
+        appearance: none;
+    }
+
+    .select:hover {
+        background-color: #ffc2d3;
+        transition: 0.1s all ease-in-out;
+    }
+
+    .Mother {
+        background-color: #ff4479;
+        padding: 20px 30px;
+        border-radius: 5px;
+        margin: 15px 0;
+        box-sizing: border-box;
+        border: 2px solid white;
+    }
+
+    .Father {
+        background-color: #DE3163;
+        padding: 10px 30px;
+        width: 100%;
+        border-radius: 5px;
+        margin: auto;
+        box-sizing: border-box;
+        border: 2px solid #6d0825;
+    }
+
+    </style>
+    <script>
+    function myFunction() {
+        const password = document.getElementById("password");
+        const username = document.getElementById("user");
+        const email = document.getElementById("email");
+
+        let isValid = true;
+
+        // Reset error messages
+        document.getElementById("passwordError").innerText = "";
+        document.getElementById("userError").innerText = "";
+        document.getElementById("emailError").innerText = "";
+
+        if (!password.value) {
+            document.getElementById("passwordError").innerText = "Password is required";
+            isValid = false;
+        }
+        if (!username.value) {
+            document.getElementById("userError").innerText = "Username is required";
+            isValid = false;
+        }
+        if (!email.value) {
+            document.getElementById("emailError").innerText = "Email is required";
+            isValid = false;
+        }
+
+        if (isValid) {
+            if (confirm("Are you finished?")) {
+                window.location.href = "TABLE.html";
+            } else {
+                window.alert("Ok check again");
+            }
+        } else {
+            window.alert("Fill up the form.");
+        }
+    }
+</script>
+
+<body>
+
+    <div class = "container">
+        <div class = "Mother">   
+            <p style = "font-size: 35px;">Activity Form</p>
+            <hr>
+            <p>Finish it until 10:00 a.m.</p>
+        </div>
+        <div class = "remain">   
+        <input type="text" id="country" name="country" value="REMAINDER: This is for the students only!" readonly class ="int">
+        </div>
+
+        <br>
+        <div class = "Father">   
+            <p style = "font-size: 20px;">User Information</p>
+        </div>
+        <div class = "box">   
+            <p>Name:</p>    
+            <input type = "text" class = "int"></input>  
+        </div>
+
+        <div class = "box">
+            <p>Age:</p>    
+            <input type = "number" class = "int"></input> 
+        </div>
+
+        <div class = "box">
+            <label for ="birthday">Birthday</label>    
+            <input type="date" id="birthday" name="birthday" max="2025-12-31" class = "int">
+        </div>
+
+        <div class = "box">
+            <p>Username:</p>    
+            <input type = "text" autocomplete = "on" class = "int" id = "user"></input> 
+            <span id="userError" style="color: rgb(255, 0, 106);"></span>
+        </div>
+
+        <div class = "box">
+            <p>Email:</p>    
+            <input type = "email" autocomplete = "on" class = "int" id = "email"></input>
+            <span id="emailError" style="color: rgb(255, 0, 106);"></span>
+        </div>
+
+        <div class = "box">
+            <p>Password:</p>    
+            <input type = "password" class = "int" id = "password"></input> 
+            <span id="passwordError" style="color: rgb(255, 0, 106);"></span>
+        </div>
+
+        <br>
+        <div class = "Father">   
+            <p style = "font-size: 20px;">Questions</p>
+        </div>
+
+        <div class = "box">
+                <p>Do you have animal/s at your home?</p>
+                <br>
+                <input type="radio" id="yes" name="animals">
+                <label for="yes">&nbsp Yes</label><br><br>
+
+                <input type="radio" id="no" name="animals">
+                <label for="no">&nbsp No</label><br><br>
+    
+                <input type="radio" id="maybe" name="animals">
+                <label for="maybe">&nbsp Maybe</label><br><br>
+    
+                <input type="radio" id="say" name="animals">
+                <label for="say">&nbsp Rather not say</label><br><br>
+            </div> 
+
+            <div class = "box">
+                <p>If yes, what animal?</p>
+                <br>
+                <input type="checkbox">
+                <label for="yes">&nbsp Cat</label><br><br>
+
+                <input type="checkbox">
+                <label for="no">&nbsp Dog</label><br><br>
+    
+                <input type="checkbox">
+                <label for="maybe">&nbsp Bird</label><br><br>
+    
+                <input type="checkbox">
+                <label for="say">&nbsp Others</label><br><br>
+            </div>     
+
+            <div class = "box">
+                <p>Do you have income to take care your pet?</p>
+                <br>
+                    <select class = "select">
+                        <option>Yes</option>  
+                        <option>No</option>   
+                        <option>Rather not say</option>   
+                    </select>
+            </div>   
+
+            <div class = "box">
+                <p>What's your pet's name: </p>    
+                <input type = "text" class = "int" maxlength= "10" placeholder = "only 10 letters"></input> 
+            </div>
+
+        <div class = "box">
+            <p>Pet adoption certificate (optional): </p>    
+            <input type = "file" class = "int"></input> 
+        </div>
+
+        <div class = "box">
+            <p>Picture of your pet/s: </p>    
+            <input accept = "image/*" type="file" class = "int"></input> 
+        </div>
+
+        <div class = "box">
+            <label for="reason">Reason why you adopt them: </label>    
+            <textarea name = "reason" class="int"></textarea> 
+        </div>
+
+        <br>    
+    <input value = "Submit" type = "button" onclick = "myFunction()" class = "btn"></input>    
+</div>
+
+
+</body>
+</html>
